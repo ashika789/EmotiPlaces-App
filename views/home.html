@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!-- 	<link href="emotiplaces/views/stylesheet.css" rel="stylesheet" type="text/css">
+ --><title>EmotiPlaces</title>
+	<div class="h1_new"><h1> Emoti Places </h1></div>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<style>
+	.row {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.col-md-4 {
+		padding-top: 80px;
+	}
+	.h1_new {
+		padding-left: 0px;
+		text-align: center;
+		font-family: "Helvetica Neue 25 UltraLight";
+		font-size:50px;
+	}
+</style>
+<body bgcolor="#D8F6CE">
+	<div class="row">
+		<div class="col-md-8">
+			<h1>What's up?</h1>
+				{% for categoryvenue in categoryvenues %}
+					<a href="https://foursquare.com/v/{{categoryvenue['id']}}">
+					<button type="button" class="btn btn-default">
+					{{categoryvenue['name']}}
+					</button></a>
+				{% endfor %}
+		</div>
+		<div class="col-md-4">
+			Categories
+			<br><form action="go">
+				<select class="form-control" name="category">
+					{% for categoryname in categorynames %}
+						<option value="{{categoryname}}">{{categoryname}}</option>
+					{% endfor %}
+				</select>
+			    <input type="hidden" name="category" value={{category}}>
+			    <br><button type="submit" class="btn btn-default">Go</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</html>

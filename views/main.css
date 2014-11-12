@@ -1,0 +1,22 @@
+/*@font-face{
+    font-family: "Helvetica Neue";
+    src: url('HelveticaNeue.ttf'),
+    url('HelveticaNeue.eot'); /* IE */
+/*}*/
+
+@font-face {
+    font-family: 'helvetica_neueregular';
+    src: url('helveticaneueultralight-webfont.eot');
+    src: url('helveticaneueultralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneueultralight-webfont.woff') format('woff'),
+         url('helveticaneueultralight-webfont.ttf') format('truetype'),
+         url('helveticaneueultralight-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'helvetica_neueregular';
+}
